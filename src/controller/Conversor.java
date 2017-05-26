@@ -117,7 +117,7 @@ public class Conversor {
 
         for (Map.Entry<String, String> campo : dados.entrySet()) {
             if (!campo.getKey().toUpperCase().equals("TYPE")) {
-                referencia += "    " + campo.getKey().toUpperCase() + " = {" + campo.getValue() + "},\n";
+                referencia += "    " + campo.getKey().toUpperCase().replaceAll(" ", "_") + " = {" + campo.getValue() + "},\n";
             }
         }
 
